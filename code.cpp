@@ -50,7 +50,7 @@ public:
         count++;   // Increase the number of stored expenses.
         cout << "Expense added successfully!\n";
     }
-    
+
     // Function to display all expenses.
     void viewExpenses()
     {
@@ -72,6 +72,31 @@ public:
         }
     }
 
+    // Function to delete an expense.
+    void deleteExpense()
+    {
+        int id;
 
+        cout << "\nEnter the ID of the expense you want to delete: ";
+        cin >> id;
 
+        for (int i = 0; i < count; i++)
+        {
+            if (expenses[i].id == id)
+            {
+                // Move all expenses after this one, one position back.
+                for (int j = i; j < count - 1; j++)
+                {
+                    expenses[j] = expenses[j + 1];
+                }
+              
+                count--;   // Reduce the number of expenses.
+                cout << "Expense deleted successfully!\n";
+                return;
+            }
+        }
+
+        cout << "Expense not found.\n";
+    }
+    
 
