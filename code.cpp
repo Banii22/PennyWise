@@ -119,7 +119,7 @@ int main()
 
     int choice;
 
-    while (true)
+    for(int i=0; i<100; i++)
     {
         cout << "\n==============================\n";
         cout << "          PENNYWISE\n";
