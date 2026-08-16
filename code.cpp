@@ -39,3 +39,39 @@ public:
 
         cout << "Enter amount: ";
         cin >> expenses[count].amount;
+        if (expenses[count].amount <= 0)
+        {
+            cout << "Amount must be greater than 0.\n";
+            return;
+        }
+
+        expenses[count].id = nextId;// Give the expense an ID.
+        nextId++; // Increase ID for the next expense.
+        count++;   // Increase the number of stored expenses.
+        cout << "Expense added successfully!\n";
+    }
+    
+    // Function to display all expenses.
+    void viewExpenses()
+    {
+        if (count == 0)
+        {
+            cout << "\nNo expenses found.\n";
+            return;
+        }
+
+        cout << "\n========== ALL EXPENSES ==========\n";
+
+        for (int i = 0; i < count; i++)
+        {
+            cout << "\nID: " << expenses[i].id;
+            cout << "\nName: " << expenses[i].name;
+            cout << "\nCategory: " << expenses[i].category;
+            cout << "\nAmount: Rs. " << expenses[i].amount;
+            cout << "\n-----------------------------\n";
+        }
+    }
+
+
+
+
