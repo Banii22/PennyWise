@@ -134,5 +134,35 @@ int main()
 
         cout << "Enter your choice: ";
         cin >> choice;
+        
+         if (choice == 1)
+        {
+            tracker.addExpense();
+        }
+        else if (choice == 2)
+        {
+            tracker.viewExpenses();
+        }
+        else if (choice == 3)
+        {
+            tracker.deleteExpense();
+        }
+        else if (choice == 4)
+        {
+            tracker.showTotal();
+        }
+        else if (choice == 5)
+        {
+            cout << "\nThank you for using PennyWise!\n";
+            break;
+        }
+        else
+        {
+            cout << "Invalid choice. Please try again.\n";
+        }
+    }
+
+    return 0;
+}
 
 
