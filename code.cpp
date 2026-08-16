@@ -98,5 +98,41 @@ public:
 
         cout << "Expense not found.\n";
     }
-    
+     // Function to calculate and display the total expense.
+    void showTotal()
+    {
+        double total = 0;
+
+        for (int i = 0; i < count; i++)
+        {
+            total = total + expenses[i].amount;
+        }
+
+        cout << "\nTotal Expense: Rs. " << total << "\n";
+    }
+};
+
+int main()
+{
+    // Create an object of ExpenseTracker.
+    ExpenseTracker tracker;
+
+    int choice;
+
+    while (true)
+    {
+        cout << "\n==============================\n";
+        cout << "          PENNYWISE\n";
+        cout << "       Navigate & Track\n";
+        cout << "==============================\n";
+
+        cout << "1. Add Expense\n";
+        cout << "2. View Expenses\n";
+        cout << "3. Delete Expense\n";
+        cout << "4. Show Total\n";
+        cout << "5. Exit\n";
+
+        cout << "Enter your choice: ";
+        cin >> choice;
+
 
